@@ -1,0 +1,91 @@
+/* packaging_services_styles.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #28a745;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .service {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service h2 {
+    color: #28a745;
+    margin-bottom: 1rem;
+  }
+  
+  .service ul {
+    padding-left: 1.5rem;
+  }
+  
+  .service ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .service table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .service th, .service td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .service th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+  }
+  
+  .cta {
+    background-color: #d4edda;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .cta h2 {
+    color: #155724;
+  }
+  
+  .cta a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .cta a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  

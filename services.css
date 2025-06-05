@@ -1,0 +1,125 @@
+/* styles.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #007bff;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .service {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .service ul {
+    padding-left: 1.5rem;
+  }
+  
+  .service ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .cta {
+    background-color: #e9f5ff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .cta h2 {
+    color: #0056b3;
+  }
+  
+  .cta ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .cta ul li::before {
+    content: \"✔ \";
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  .services-header {
+    background-color: #007b5e;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+  }
+  
+  .services-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .services-header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .services-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .services-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .services-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  

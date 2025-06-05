@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navdiv">
+        <img src="logo2.jpg" class="logo" alt="Logo" />
+        <span class="log">Agrotrade</span>
+
+        <ul class="nav-links">
+          <li><a href="Home.html" target="_parent">Home</a></li>
+          <li><a href="product.html" target="_blank">Products</a></li>
+          <li><a href="contact.html" target="_blank">Contact</a></li>
+          <li><a href="about.html" target="_blank">About</a></li>
+          <li class="search"><input type="text" placeholder="SEARCH" /></li>
+          <li><button><a href="login.html" target="_blank">Log In</a></button></li>
+          <li><button><a href="Register.html" target="_blank">Register</a></button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <form class="form-login" action="/auth/login" method="post">
+      <div class="container-Signe">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" id="uname" name="uname" placeholder="Enter Username" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="psw" name="psw" placeholder="Enter Password" required />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color: #f1f1f1;">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>AgroTrade</h2>
+        <p>Farm-Fresh Goodness.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="Home.html" target="_blank">Home</a>
+        <a href="product.html" target="_blank">Products</a>
+        <a href="about.html" target="_blank">About</a>
+        <a href="contact.html" target="_blank">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><im src="https://via.placeholder.com/24x24?text=F" alt="Facebook"></a>
+        <a href="#"><im src="https://via.placeholder.com/24x24?text=T" alt="Twitter"></a>
+        <a href="#"><im src="https://via.placeholder.com/24x24?text=I" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 AgroTrade. All rights reserved.
+    </div>
+  </footer>
+  // Add this to your login.html before the closing </body> tag
+<script>
+document.querySelector('.form-login').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const email = document.getElementById('uname').value;
+  const password = document.getElementById('psw').value;
+  
+  try {
+    const response = await fetch('http://localhost:5000/api/v1/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, password })
+    });
+    
+    const data = await response.json();
+    
+    if (response.ok) {
+      // Store the token (you might want to use localStorage or cookies)
+      localStorage.setItem('token', data.token);
+      
+      // Redirect to home page or dashboard
+      window.location.href = 'Home.html';
+    } else {
+      alert(data.error || 'Login failed');
+    }
+  } catch (err) {
+    console.error('Error:', err);
+    alert('An error occurred during login');
+  }
+});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,546 @@
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef2f3;
+  margin: 0;
+  padding: 0;
+} /* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #348737;
+    padding: 10px 20px;
+   
+  }
+  
+  .navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .log {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgb(246, 249, 246);
+    margin-left: 10px;
+    flex: 1;
+  }
+  
+  /* Nav Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+  }
+  
+  .nav-links li a:hover {
+    background-color: rgb(240, 245, 243);
+  }
+  
+  /* Buttons in Nav */
+  .navbar button {
+    background: rgb(15, 47, 15);
+    border-radius: 20px;
+    padding: 5px 12px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar button a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Search Box */
+  .search input {
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 5px 10px;
+    color: #6C4E31;
+    width: 130px;
+  }
+  
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(20% - 20px); /* 5 cards per row */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .product-card img {
+    width: 220px;
+    height: 300px;
+    
+    border-radius:25px;
+    padding:12px;
+    
+     /* Rounded top corners */
+  }
+  
+  .product-info {
+    padding: 15px;
+  }
+  
+  .product-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #222;
+  }
+  
+  .product-price {
+    color: #e91e63;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    font-size: 14px;
+    color: #555;
+  }
+  .product-image {
+    border-radius: 10px;
+  }
+  div >img{
+border-radius: 10px; 
+}
+
+/* Register */
+.container-Register {
+    padding: 16px;
+    margin: 5% auto;
+    max-width: 600px;
+    background: #f5f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, .05);
+  }
+  
+  /* Form Headings */
+  .container-Register h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  input[type=text],
+  input[type=password],
+  input[type=tel] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .registerbtn,
+  button[type="submit"] {
+    background-color: rgb(15, 47, 15);
+    color: white;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  button:hover,
+  .registerbtn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Cancel Button */
+  .cancelbtn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Forgot Password */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Sign-in note */
+  .container-signin {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  /* footer */
+footer {
+    height: 35vh;
+    width: 100vw;
+   }
+   .site-footer {
+     background-color: #348737;
+     color: #fff;
+     padding: 40px 20px 20px;
+     margin-top: 50px;
+     font-size: 14px;
+   }
+   
+   .footer-content {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     max-width: 1200px;
+     margin: 0 auto 20px;
+     gap: 20px;
+   }
+   
+   .footer-brand h2 {
+     margin: 0;
+     color: #f8f8f8;
+   }
+   
+   .footer-brand p {
+     margin-top: 5px;
+     color: #ccc;
+   }
+   
+   .footer-links,
+   .footer-social {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+   }
+   
+   .footer-links a,
+   .footer-social a {
+     color: #ccc;
+     text-decoration: none;
+     transition: color 0.3s;
+   }
+   
+   .footer-links a:hover,
+   .footer-social a:hover {
+     color: #fff;
+   }
+   
+   .footer-social img {
+     width: 24px;
+     height: 24px;
+   }
+   
+   .footer-bottom {
+     text-align: center;
+     border-top: 1px solid #444;
+     padding-top: 15px;
+     color: #aaa;
+   } 
+   
+   .contact-section {
+     max-width: 800px;
+     margin: 50px auto;
+     padding: 40px;
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+   }
+   
+   .contact-section h2 {
+     text-align: center;
+     margin-bottom: 30px;
+     color: #333;
+   }
+   
+   .contact-form {
+     display: flex;
+     flex-direction: column;
+   }
+   
+   .contact-form label {
+     margin-bottom: 8px;
+     font-weight: bold;
+   }
+   
+   .contact-form input,
+   .contact-form textarea {
+     padding: 10px;
+     margin-bottom: 20px;
+     border: 1px solid #ccc;
+     border-radius: 6px;
+     font-size: 16px;
+     resize: none;
+   }
+   
+   .contact-form button {
+     background-color: #007BFF;
+     color: white;
+     padding: 12px;
+     border: none;
+     border-radius: 6px;
+     font-size: 18px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+   
+   .contact-form button:hover {
+     background-color: #0056b3;
+   }
+   
+   @media (max-width: 600px) {
+     .contact-section {
+       padding: 20px;
+     }
+   }
+   
+  /* Form Styling */
+  .form-login {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Input Fields */
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    display: inline-block;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #8953ef;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Cancel Button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Form Containers */
+  .container, .container-Signe {
+    padding: 16px;
+    background-color: #f5f4f4;
+    border-radius: 4px;
+  }
+  
+  .container-Signe {
+    margin: 10%;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Avatar */
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  /* Forgot Password */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Small Screen Adjustments */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+  
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+  /* profile */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  
+  .profile-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .profile-card {
+    background: #9bb18c;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a90e2;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .profile-info p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .profile-info button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .profile-info button:hover {
+    background-color: #357ABD;
+  }
+  /* sell */
+ 
+  
+  .form-container {
+    align-items: center;
+    margin: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #9bb18c;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="file"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #6c8098;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+  }

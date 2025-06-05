@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Calibri, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  /* Sticky Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    background-color: rgb(139, 230, 199);
+    padding: 10px 20px;
+    width: 100vw;
+  }
+  
+  .navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo and Brand */
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .log {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(83, 118, 81);
+    font-family: cursive;
+    margin-right: auto;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-links li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: #3e8e41;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Button inside nav */
+  .nav-links button {
+    background-color: rgb(15, 47, 15);
+    border: none;
+    border-radius: 20px;
+    padding: 5px 12px;
+  }
+  
+  .nav-links button a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Search Input */
+  .search input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 120px;
+    color: #6C4E31;
+  }
+  
+  /* Responsive Navbar */
+  /* .menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  } */
+  
+   @media (max-width: 455px) {
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      background-color: rgb(175, 243, 220);
+      margin-top: 10px;
+      padding: 10px 0;
+    } 
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .log {
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+  }
+  
+  /* Form Styling */
+  form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Input Fields */
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    display: inline-block;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #8953ef;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Cancel Button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Form Containers */
+  .container, .container-Signe {
+    padding: 16px;
+    background-color: #f5f4f4;
+    border-radius: 4px;
+  }
+  
+  .container-Signe {
+    margin: 10%;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Avatar */
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  /* Forgot Password */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Small Screen Adjustments */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+  
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+  footer {
+    height: 35vh;
+    width: 100vw;
+   }
+   .site-footer {
+     background-color: #348737;
+     color: #fff;
+     padding: 40px 20px 20px;
+     margin-top: 50px;
+     font-size: 14px;
+   }
+   
+   .footer-content {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     max-width: 1200px;
+     margin: 0 auto 20px;
+     gap: 20px;
+   }
+   
+   .footer-brand h2 {
+     margin: 0;
+     color: #f8f8f8;
+   }
+   
+   .footer-brand p {
+     margin-top: 5px;
+     color: #ccc;
+   }
+   
+   .footer-links,
+   .footer-social {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+   }
+   
+   .footer-links a,
+   .footer-social a {
+     color: #ccc;
+     text-decoration: none;
+     transition: color 0.3s;
+   }
+   
+   .footer-links a:hover,
+   .footer-social a:hover {
+     color: #fff;
+   }
+   
+   .footer-social img {
+     width: 24px;
+     height: 24px;
+   }
+   
+   .footer-bottom {
+     text-align: center;
+     border-top: 1px solid #444;
+     padding-top: 15px;
+     color: #aaa;
+   } 
